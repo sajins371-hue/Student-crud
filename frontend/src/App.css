@@ -1,211 +1,1025 @@
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f5f7fb;
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
 }
 
-.container {
-  width: 550px;
-  margin: 40px auto;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-  animation: fadeIn .4s ease;
+/* ===========================
+   BODY
+=========================== */
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+    overflow-x:hidden;
 }
 
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 25px;
+/* Floating background circles */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:rgba(255,255,255,.08);
+    border-radius:50%;
+    top:-150px;
+    left:-150px;
+    z-index:-1;
 }
 
-h2 {
-  text-align: center;
-  color: #8305bd;
+body::after{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:rgba(255,255,255,.08);
+    border-radius:50%;
+    bottom:-220px;
+    right:-220px;
+    z-index:-1;
 }
 
-hr {
-  margin: 30px 0;
-  border: none;
-  height: 1px;
-  background: #e5e7eb;
+/* ===========================
+   APP
+=========================== */
+
+.app{
+
+    min-height:100vh;
+
+    padding:40px;
 }
 
-/* ---------------- Inputs ---------------- */
+/* ===========================
+   DASHBOARD
+=========================== */
 
-input {
-  width: 100%;
-  padding: 13px;
-  margin-bottom: 15px;
-  border: 1px solid #d1d5db;
-  border-radius: 10px;
-  box-sizing: border-box;
-  font-size: 16px;
-  transition: .25s;
+.dashboard{
+
+    max-width:1500px;
+
+    margin:auto;
+
 }
 
-input:focus {
-  outline: none;
-  border-color: #4f46e5;
-  box-shadow: 0 0 0 4px rgba(79,70,229,.15);
+/* ===========================
+   HEADER
+=========================== */
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+    margin-bottom:40px;
+
+    color:white;
+
 }
 
-/* ---------------- Buttons ---------------- */
-
-button {
-  border: none;
-  border-radius: 10px;
-  padding: 11px 22px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: .25s ease;
+.header h1{
+    font-size:3.2rem;
+    white-space:nowrap;
 }
 
-button:hover {
-  transform: translateY(-2px);
+.header p{
+
+    margin-top:8px;
+
+    opacity:.9;
+
+    font-size:1rem;
+
 }
 
-/* Add */
+/* ===========================
+   STATS
+=========================== */
 
-.add-btn {
-  background: #7c07bf;
-  color: white;
+.stats{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
 }
 
-.add-btn:hover {
-  background: #6d06ad;
+.stat-card{
+
+    min-width:180px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:18px;
+
+    padding:24px;
+
+    text-align:center;
+
+    color:white;
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
 }
 
-/* Update */
+.stat-card:hover{
 
-.update-btn {
-  background: #0f7754f6;
-  color: white;
+    transform:translateY(-8px);
+
 }
 
-.update-btn:hover {
-  background: #059669;
+.stat-card h2{
+
+    font-size:2rem;
+
+    margin-bottom:8px;
+
+    font-weight:700;
+
 }
 
-/* Cancel */
+.stat-card span{
 
-.cancel-btn {
-  background: #0852e4e5;
-  color: white;
+    font-size:.9rem;
+
+    opacity:.9;
+
 }
 
-.cancel-btn:hover {
-  background: #0968eee5;
+/* ===========================
+   MAIN CONTENT
+=========================== */
+
+.main-content{
+
+    display:grid;
+
+    grid-template-columns:370px 1fr;
+
+    gap:35px;
+
+    align-items:start;
+
+}
+
+/* ===========================
+   FORM CARD
+=========================== */
+
+.form-card{
+
+    background:rgba(255,255,255,.95);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+    position:sticky;
+
+    top:30px;
+
+}
+
+.form-card h2{
+
+    margin-bottom:25px;
+
+    color:#333;
+
+    font-size:1.5rem;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+
+.form-card input{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    margin-bottom:18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:14px;
+
+    background:#f5f7fb;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    border:2px solid transparent;
+
+}
+
+.form-card input::placeholder{
+
+    color:#999;
+
+}
+
+.form-card input:focus{
+
+    background:white;
+
+    border-color:#6c63ff;
+
+    box-shadow:0 0 0 4px rgba(108,99,255,.15);
+
+}
+
+/* ===========================
+   BUTTON GROUP
+=========================== */
+
+.form-buttons{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:10px;
+
+    flex-wrap:wrap;
+
+}
+
+.form-buttons button{
+
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+/* ===========================
+   ADD BUTTON
+=========================== */
+
+.add-btn{
+
+    background:linear-gradient(135deg,#6C63FF,#5B4BFF);
+
+    color:white;
+
+}
+
+.add-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(108,99,255,.35);
+
+}
+
+/* ===========================
+   UPDATE BUTTON
+=========================== */
+
+.update-btn{
+
+    background:linear-gradient(135deg,#00C853,#00B248);
+
+    color:white;
+
+}
+
+.update-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(0,200,83,.35);
+
+}
+
+/* ===========================
+   CANCEL BUTTON
+=========================== */
+
+.cancel-btn{
+
+    background:#ECEFF4;
+
+    color:#444;
+
+}
+
+.cancel-btn:hover{
+
+    background:#dfe5ec;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+   BUTTON ACTIVE EFFECT
+=========================== */
+
+.form-buttons button:active{
+
+    transform:scale(.97);
+
+}
+
+/* ===========================
+   LIST CARD
+=========================== */
+
+.list-card{
+
+    background:rgba(255,255,255,.95);
+
+    border-radius:24px;
+
+    padding:30px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+    min-height:600px;
+
+}
+
+/* ===========================
+   LIST HEADER
+=========================== */
+
+.list-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.list-header h2{
+
+    color:#333;
+
+    font-size:1.6rem;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   EMPTY STATE
+=========================== */
+
+.empty-state{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    min-height:300px;
+
+    color:#777;
+
+}
+
+.empty-state h3{
+
+    margin-bottom:10px;
+
+    font-size:1.5rem;
+
+}
+
+.empty-state p{
+
+    color:#999;
+
+}
+
+/* ===========================
+   STUDENT CARD
+=========================== */
+
+.student-card{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    background:#fff;
+
+    margin-bottom:18px;
+
+    border:1px solid #edf0f7;
+
+    transition:.35s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+}
+
+.student-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 35px rgba(0,0,0,.12);
+
+}
+
+/* ===========================
+   AVATAR
+=========================== */
+
+.student-avatar{
+
+    width:65px;
+
+    height:65px;
+
+    min-width:65px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(135deg,#6C63FF,#8E7DFF);
+
+    color:#fff;
+
+    font-size:1.5rem;
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   STUDENT INFO
+=========================== */
+
+.student-info{
+
+    flex:1;
+
+}
+
+.student-info h3{
+
+    color:#222;
+
+    font-size:1.2rem;
+
+    margin-bottom:8px;
+
+}
+
+.student-info p{
+
+    color:#666;
+
+    margin-bottom:12px;
+
+}
+
+.department{
+
+    display:inline-block;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    background:#eef2ff;
+
+    color:#5b4bff;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   ACTION BUTTONS
+=========================== */
+
+.actions{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.actions button{
+
+    border:none;
+
+    padding:12px 22px;
+
+    font-size: 15px;
+    border-radius:10px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.3s;
+
 }
 
 /* Edit */
 
-.edit-btn {
-  background: #690bf5;
-  color: white;
-  width: 80px;
+.edit-btn{
+
+    background:#3b82f6;
+
 }
 
-.edit-btn:hover {
-  background: #6906d9;
+.edit-btn:hover{
+
+    background:#2563eb;
+
+    transform:translateY(-2px);
+
 }
 
 /* Delete */
 
-.delete-btn {
-  background: #e11d48;
-  color: white;
-  width: 80px;
+.delete-btn{
+
+    background:#ef4444;
+
 }
 
-.delete-btn:hover {
-  background: #dc2626;
+.delete-btn:hover{
+
+    background:#dc2626;
+
+    transform:translateY(-2px);
+
 }
 
-/* ---------------- Student Card ---------------- */
+.actions button:active{
 
-.student-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 18px;
-  margin-top: 15px;
-  transition: .25s;
+    transform:scale(.95);
+
 }
 
-.student-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0,0,0,.08);
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
 }
 
-.student-info h3 {
-  margin: 0;
-  color: #6a16d0ec;
+::-webkit-scrollbar-thumb{
+
+    background:#b7b7c7;
+
+    border-radius:20px;
+
 }
 
-.student-info p {
-  margin-top: 6px;
-  color: #325397;
+::-webkit-scrollbar-thumb:hover{
+
+    background:#8d8da3;
+
 }
 
-.actions {
-  display: flex;
-  gap: 10px;
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1200px){
+
+    .header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .stats{
+
+        width:100%;
+
+    }
+
+    .stat-card{
+
+        flex:1;
+
+    }
+
 }
 
-/* ---------------- Empty State ---------------- */
+@media(max-width:900px){
 
-.empty {
-  text-align: center;
-  color: #9ca3af;
-  font-size: 18px;
-  margin-top: 20px;
+    .app{
+
+        padding:20px;
+
+    }
+
+    .main-content{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .form-card{
+
+        position:relative;
+
+        top:0;
+
+    }
+
 }
 
-/* ---------------- Responsive ---------------- */
+@media(max-width:700px){
 
-@media (max-width: 600px) {
+    .header h1{
 
-  .container {
-    width: 92%;
-    padding: 20px;
-  }
+        font-size:2rem;
 
-  .title {
-    font-size: 28px;
-  }
+    }
 
-  .student-card {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
+    .student-card{
 
-  .actions {
-    width: 100%;
-    justify-content: flex-end;
-  }
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .actions{
+
+        width:100%;
+
+    }
+
+    .actions button{
+
+        flex:1;
+
+    }
+
+    .form-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .stats{
+
+        flex-direction:column;
+
+    }
+
 }
 
-/* ---------------- Animation ---------------- */
+@media(max-width:500px){
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
+    .header h1{
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+        font-size:1.6rem;
+
+    }
+
+    .student-avatar{
+
+        width:75px;
+
+        height:75px;
+
+        min-width:75px;
+
+        font-size:1.8rem;
+
+    }
+
+    .student-card{
+
+        padding:28px;
+
+    }
+
+}
+
+.list-card{
+
+    height:650px;
+
+    overflow-y:auto;
+
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+
+.search-box{
+
+    width:320px;
+
+    padding:12px 18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:#f4f6fb;
+
+    border:2px solid transparent;
+
+    transition:.3s;
+
+    font-size:15px;
+
+}
+
+.search-box:focus{
+
+    border-color:#6C63FF;
+
+    background:white;
+
+    box-shadow:0 0 0 4px rgba(108,99,255,.15);
+
+}
+
+@media(max-width:700px){
+
+    .list-header{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:15px;
+
+    }
+
+    .search-box{
+
+        width:100%;
+
+    }
+
+}
+/* ===========================
+   ICONS
+=========================== */
+
+.header-title,
+.section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.search-container{
+
+    position:relative;
+
+    width:320px;
+
+}
+
+.search-icon{
+
+    position:absolute;
+
+    left:16px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+.search-box{
+
+    padding-left:45px !important;
+
+}
+
+.department{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.actions button{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+}
+
+/* ===========================
+   DELETE MODAL
+=========================== */
+
+.modal-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(4px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    animation:fadeIn .25s ease;
+}
+
+.delete-modal{
+    width:420px;
+    max-width:90%;
+    background:#fff;
+    border-radius:22px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 25px 60px rgba(0,0,0,.25);
+    animation:popup .25s ease;
+}
+
+.modal-icon{
+    width:75px;
+    height:75px;
+    margin:auto;
+    border-radius:50%;
+    background:#fee2e2;
+    color:#ef4444;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.delete-modal h2{
+    margin-bottom:10px;
+    color:#222;
+}
+
+.delete-modal p{
+    color:#666;
+    line-height:1.6;
+    margin-bottom:28px;
+}
+.modal-buttons{
+    display:flex;
+    gap:14px;
+    margin-top:30px;
+}
+
+.modal-buttons button{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    padding:14px 18px;
+
+    border:none;
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:15px;
+    font-weight:600;
+
+    transition:.25s;
+}
+
+.cancel-modal-btn{
+    background:#f3f4f6;
+    color:#374151;
+}
+
+.cancel-modal-btn:hover{
+    background:#e5e7eb;
+}
+
+.confirm-delete-btn{
+    background:#ef4444;
+    color:white;
+}
+
+.confirm-delete-btn:hover{
+    background:#dc2626;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes popup{
+    from{
+        transform:scale(.85);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.modal-buttons button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
 }
