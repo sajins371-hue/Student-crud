@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f5f7fb;
+}
+
+.container {
+  width: 550px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  animation: fadeIn .4s ease;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+h2 {
+  text-align: center;
+  color: #8305bd;
+}
+
+hr {
+  margin: 30px 0;
+  border: none;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+/* ---------------- Inputs ---------------- */
+
+input {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: .25s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 4px rgba(79,70,229,.15);
+}
+
+/* ---------------- Buttons ---------------- */
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 11px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* Add */
+
+.add-btn {
+  background: #7c07bf;
+  color: white;
+}
+
+.add-btn:hover {
+  background: #6d06ad;
+}
+
+/* Update */
+
+.update-btn {
+  background: #0f7754f6;
+  color: white;
+}
+
+.update-btn:hover {
+  background: #059669;
+}
+
+/* Cancel */
+
+.cancel-btn {
+  background: #0852e4e5;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #0968eee5;
+}
+
+/* Edit */
+
+.edit-btn {
+  background: #690bf5;
+  color: white;
+  width: 80px;
+}
+
+.edit-btn:hover {
+  background: #6906d9;
+}
+
+/* Delete */
+
+.delete-btn {
+  background: #e11d48;
+  color: white;
+  width: 80px;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+/* ---------------- Student Card ---------------- */
+
+.student-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 18px;
+  margin-top: 15px;
+  transition: .25s;
+}
+
+.student-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.08);
+}
+
+.student-info h3 {
+  margin: 0;
+  color: #6a16d0ec;
+}
+
+.student-info p {
+  margin-top: 6px;
+  color: #325397;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* ---------------- Empty State ---------------- */
+
+.empty {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 600px) {
+
+  .container {
+    width: 92%;
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .student-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* ---------------- Animation ---------------- */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
