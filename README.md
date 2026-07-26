@@ -16,31 +16,21 @@ https://sajins.pythonanywhere.com/api/students/
 
 ## 📸 Screenshots
 
-### Home Page
-
-> Add a screenshot here
+### Home
 
 ![Home](screenshots/home.png)
 
 ### Add Student
 
-> Add a screenshot here
-
 ![Add Student](screenshots/add-student.png)
 
 ### Student List
-
-> Add a screenshot here
 
 ![Student List](screenshots/student-list.png)
 
 ### Delete Confirmation
 
-> Add a screenshot here
-
-![Delete Modal](screenshots/delete-modal.png)
-
----
+![Delete](screenshots/delete-modal.png)
 
 ## ✨ Features
 
