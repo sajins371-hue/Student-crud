@@ -20,7 +20,7 @@ A modern full-stack Student Management System built using **React.js** and **Dja
 ---
 
 
-## 🌐 Live Demo
+##  Live Demo
 
 ### 🌐 Frontend
 
@@ -235,8 +235,6 @@ npm run dev
 **Sajin**
 
 B.Tech Information Technology Student
-
-- GitHub: https://github.com/sajins371-hue
 
 GitHub:
 https://github.com/sajins371-hue
