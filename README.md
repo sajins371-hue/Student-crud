@@ -1,16 +1,30 @@
 # 🎓 Student Management System
+## 📖 Project Overview
+
+The Student Management System is a full-stack CRUD web application that enables users to manage student records through a responsive React frontend and a Django REST Framework backend.
+
+The project demonstrates REST API development, frontend-backend integration, deployment, and modern web development best practices.
 
 A modern full-stack Student Management System built using **React.js** and **Django REST Framework**. The application allows users to manage student records with complete CRUD (Create, Read, Update, Delete) functionality through a clean and responsive user interface.
 
 ---
+![React](https://img.shields.io/badge/React-19-blue?logo=react)
+![Django](https://img.shields.io/badge/Django-5.2-darkgreen?logo=django)
+![DRF](https://img.shields.io/badge/Django_REST_Framework-red)
+![SQLite](https://img.shields.io/badge/SQLite-blue?logo=sqlite)
+![Vercel](https://img.shields.io/badge/Frontend-Vercel-black?logo=vercel)
+![PythonAnywhere](https://img.shields.io/badge/Backend-PythonAnywhere-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## 🌐 Live Demo
 
-### Frontend
-https://student-crud-virid.vercel.app/
+### 🌐 Frontend
 
-### Backend API
-https://sajins.pythonanywhere.com/api/students/
+👉 https://student-crud-virid.vercel.app/
+
+### 🚀 Backend API
+
+👉 https://sajins.pythonanywhere.com/api/students/
 
 ---
 
@@ -31,6 +45,17 @@ https://sajins.pythonanywhere.com/api/students/
 ### Delete Confirmation
 
 ![Delete](screenshots/delete-modal.png)
+
+## Architecture
+
+React (Frontend)
+        │
+        │ Axios
+        ▼
+Django REST API
+        │
+        ▼
+SQLite Database
 
 ## ✨ Features
 
@@ -76,11 +101,20 @@ https://sajins.pythonanywhere.com/api/students/
 - GitHub
 
 ---
+## 📊 Project Status
+
+✅ Completed
+
+✔ Full Stack
+
+✔ Live Deployed
+
+✔ Production Ready
 
 ## 📂 Project Structure
 
 ```
-student_crud/
+Student_crud/
 │
 ├── backend/
 │
@@ -192,9 +226,13 @@ npm run dev
 
 ---
 
-## 👨‍💻 Developer
+## 👨‍💻 About the Developer
 
 **Sajin**
+
+B.Tech Information Technology Student
+
+- GitHub: https://github.com/sajins371-hue
 
 GitHub:
 https://github.com/sajins371-hue
