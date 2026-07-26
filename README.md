@@ -1,4 +1,14 @@
 # 🎓 Student Management System
+
+![React](https://img.shields.io/badge/React-19-blue?logo=react)
+![Django](https://img.shields.io/badge/Django-5.2-darkgreen?logo=django)
+![DRF](https://img.shields.io/badge/Django_REST_Framework-red)
+![SQLite](https://img.shields.io/badge/SQLite-blue?logo=sqlite)
+![Vercel](https://img.shields.io/badge/Frontend-Vercel-black?logo=vercel)
+![PythonAnywhere](https://img.shields.io/badge/Backend-PythonAnywhere-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+
 ## 📖 Project Overview
 
 The Student Management System is a full-stack CRUD web application that enables users to manage student records through a responsive React frontend and a Django REST Framework backend.
@@ -8,13 +18,7 @@ The project demonstrates REST API development, frontend-backend integration, dep
 A modern full-stack Student Management System built using **React.js** and **Django REST Framework**. The application allows users to manage student records with complete CRUD (Create, Read, Update, Delete) functionality through a clean and responsive user interface.
 
 ---
-![React](https://img.shields.io/badge/React-19-blue?logo=react)
-![Django](https://img.shields.io/badge/Django-5.2-darkgreen?logo=django)
-![DRF](https://img.shields.io/badge/Django_REST_Framework-red)
-![SQLite](https://img.shields.io/badge/SQLite-blue?logo=sqlite)
-![Vercel](https://img.shields.io/badge/Frontend-Vercel-black?logo=vercel)
-![PythonAnywhere](https://img.shields.io/badge/Backend-PythonAnywhere-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+
 
 ## 🌐 Live Demo
 
